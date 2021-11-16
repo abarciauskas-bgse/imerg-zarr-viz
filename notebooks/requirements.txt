@@ -5,13 +5,16 @@ netcdf4
 pytest
 rasterio
 rioxarray
-git+git://github.com/TomNicholas/datatree
+git+git://github.com/TomNicholas/datatree@1035a9aaf53e1c133c6e958260259b9cc0e4d293
 git+git://github.com/carbonplan/ndpyramid
 numpy
 xarray
 zarr
 carbonplan_data
 intake
+netcdf4
+pytest
+
 # For pangeo-forge
 pangeo_forge_recipes
 aiohttp
