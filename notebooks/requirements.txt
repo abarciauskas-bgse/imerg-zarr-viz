@@ -1,3 +1,4 @@
+# For ndpyramidding
 carbonplan_data
 pooch
 netcdf4
@@ -11,3 +12,8 @@ xarray
 zarr
 carbonplan_data
 intake
+# For pangeo-forge
+pangeo_forge_recipes
+aiohttp
+mypy_extensions
+pandas
