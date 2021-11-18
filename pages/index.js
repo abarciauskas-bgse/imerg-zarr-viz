@@ -1,9 +1,15 @@
-import { Map, Raster, Line, RegionPicker } from '@carbonplan/maps'
+import { useState } from 'react'
+import { Map, Raster, Line } from '@carbonplan/maps'
+import RegionControls from './components/region-controls'
 import { useColormap } from '@carbonplan/colormaps'
 
 const Index = () => {
   const colormap = useColormap('warm')
-
+  const [time, setTime] = useState(1)
+  const getters = { time }
+  const setters = {
+    setTime
+  }
   return (
     <div style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}>
       <Map zoom={2} center={[0, 0]} debug={false}>
@@ -18,9 +24,14 @@ const Index = () => {
           display={true}
           opacity={1}
           mode={'texture'}
-          source={'http://localhost:8000/gpmimerg.zarr/'}
+          source={'http://localhost:8000/gpmimerg-monthly.zarr'}
           variable={'precipitation'}
+          selector={{ time }}
         />
+        <RegionControls
+          time={time}
+        /> 
+        {/* <ParameterControls getters={getters} setters={setters} />        */}
       </Map>
     </div>
   )

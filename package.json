@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development next -p 3000",
+    "dev": "NODE_OPTIONS='--inspect' NODE_ENV=development next -p 3000",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write pages/**/*.js"
