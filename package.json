@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@carbonplan/colormaps": "^2.0.0",
+    "@carbonplan/components": "^10.3.0",
     "@carbonplan/maps": "^1.1.0",
     "@carbonplan/theme": "^7.0.0",
     "next": "^11.1.0",

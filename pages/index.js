@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Map, Raster, Line } from '@carbonplan/maps'
 import RegionControls from './components/region-controls'
+import ParameterControls from './components/parameter-controls'
 import { useColormap } from '@carbonplan/colormaps'
 
 const Index = () => {
@@ -24,14 +25,14 @@ const Index = () => {
           display={true}
           opacity={1}
           mode={'texture'}
-          source={'http://localhost:8000/gpmimerg-monthly.zarr'}
+          source={'http://localhost:8000/gpmimerg-monthly.zarr/'}
           variable={'precipitation'}
           selector={{ time }}
         />
         <RegionControls
           time={time}
         /> 
-        {/* <ParameterControls getters={getters} setters={setters} />        */}
+        <ParameterControls getters={getters} setters={setters} />       
       </Map>
     </div>
   )
