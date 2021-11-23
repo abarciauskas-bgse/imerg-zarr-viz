@@ -5,12 +5,15 @@ import ParameterControls from './components/parameter-controls'
 import { useColormap } from '@carbonplan/colormaps'
 
 const Index = () => {
+  console.log('IN INDEX')
+  debugger;
   const colormap = useColormap('warm')
   const [time, setTime] = useState(1)
   const getters = { time }
   const setters = {
     setTime
   }
+  
   return (
     <div style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}>
       <Map zoom={2} center={[0, 0]} debug={false}>
