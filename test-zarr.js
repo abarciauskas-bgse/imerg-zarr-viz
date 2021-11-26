@@ -1,8 +1,8 @@
 const fs = require('fs.promises')
 const regl = require('regl')
 const zarr = require('zarr-js')(fs.readFile)
-const carbonplanMaps = require('@carbonplan/maps/dst/index')
-console.log(carbonplanMaps.Tile)
+const { Tile } = require('../maps/src/tile')
+console.log(Tile)
 const source = 'data/gpmimerg-monthly.zarr/';
 
 const getPyramidMetadata = (metadata) => {

@@ -14,7 +14,7 @@
   "dependencies": {
     "@carbonplan/colormaps": "^2.0.0",
     "@carbonplan/components": "^10.3.0",
-    "@carbonplan/maps": "^1.2.0",
+    "@carbonplan/maps": "file:../maps",
     "@carbonplan/theme": "^7.0.0",
     "fs.promises": "^0.1.2",
     "next": "^11.1.0",

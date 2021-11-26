@@ -5,8 +5,6 @@ import ParameterControls from './components/parameter-controls'
 import { useColormap } from '@carbonplan/colormaps'
 
 const Index = () => {
-  console.log('IN INDEX')
-  debugger;
   const colormap = useColormap('warm')
   const [time, setTime] = useState(1)
   const getters = { time }
@@ -28,9 +26,9 @@ const Index = () => {
           display={true}
           opacity={1}
           mode={'texture'}
-          source={'http://localhost:8000/gpmimerg-monthly.zarr/'}
+          source={'http://localhost:8000/gpmimerg.zarr'}
           variable={'precipitation'}
-          selector={{ time }}
+          //selector={{ time }}
         />
         <RegionControls
           time={time}
