@@ -32,8 +32,9 @@ Execute cells in `imerg-zarr-from-tif.ipynb`.
 ## Step 3: Run an http server for the Zarr (assuming local storage)
 
 ```bash
-cd ../data
-npm install http-server -g
+cd data
+# if you haven't installed the server already
+# $ npm install http-server -g
 http-server -p 8000 --cors
 ```
 

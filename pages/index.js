@@ -7,8 +7,10 @@ import { useColormap } from '@carbonplan/colormaps'
 const Index = () => {
   const colormap = useColormap('warm')
   const [time, setTime] = useState(1)
-  const getters = { time }
+  const [displayCog, setCogDisplay] = useState(true)
+  const getters = { displayCog, time }
   const setters = {
+    setCogDisplay,
     setTime
   }
   
@@ -28,7 +30,16 @@ const Index = () => {
           mode={'texture'}
           source={'http://localhost:8000/gpmimerg.zarr'}
           variable={'precipitation'}
-          //selector={{ time }}
+        />
+        <Raster
+          colormap={colormap}
+          clim={[0, 1]}
+          display={displayCog}
+          opacity={1}
+          mode={'texture'}
+          type={'cog'}
+          source={ 'https://ds-data-projects.s3.amazonaws.com/smce-eis/3B-MO.MS.MRG.3IMERG.20200501-S000000-E235959.05.V06B.HDF5.tif' }
+          variable={'precipitation'}
         />
         <RegionControls
           time={time}
