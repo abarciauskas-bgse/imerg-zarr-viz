@@ -7,7 +7,7 @@ import { useColormap } from '@carbonplan/colormaps'
 const Index = () => {
   const colormap = useColormap('warm')
   const [time, setTime] = useState(1)
-  const [displayCog, setCogDisplay] = useState(true)
+  const [displayCog, setCogDisplay] = useState(false)
   const getters = { displayCog, time }
   const setters = {
     setCogDisplay,
