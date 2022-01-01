@@ -3,20 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://abarciauskas-bgse.github.io/pages",
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' NODE_ENV=development next dev -p 3000",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write pages/**/*.js"
+    "format": "prettier --write pages/**/*.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@carbonplan/colormaps": "^2.0.0",
     "@carbonplan/components": "^10.3.0",
-    "@carbonplan/maps": "file:../maps",
     "@carbonplan/theme": "^7.0.0",
     "fs.promises": "^0.1.2",
+    "gh-pages": "^3.2.3",
     "next": "^11.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
