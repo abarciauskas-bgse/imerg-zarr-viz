@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import { Map, Raster, Line } from '@carbonplan/maps'
-import RegionControls from './components/region-controls'
 import ParameterControls from './components/parameter-controls'
+import RegionControls from './components/region-controls'
 import { useColormap } from '@carbonplan/colormaps'
 
 const Index = () => {
   const colormap = useColormap('warm')
-  const [time, setTime] = useState(1)
+  const [day, setDay] = useState(1)
   const [displayCog, setCogDisplay] = useState(false)
-  const getters = { displayCog, time }
+  const getters = { displayCog, day }
   const setters = {
     setCogDisplay,
-    setTime
+    setDay
   }
   
   return (
@@ -24,17 +24,17 @@ const Index = () => {
         />
         <Raster
           colormap={colormap}
-          clim={[0, 1]}
+          clim={[1, 0]}
           display={true}
           opacity={1}
           mode={'texture'}
-          selector={{ time }}
-          source={'http://localhost:8000/gpmimerg-monthly.zarr'}
-          variable={'precipitation'}
+          selector={{ day }}
+          source={'http://localhost:8000/smap-soil-moisture-daily.zarr'}
+          variable={'soil_moisture'}
         />
         <RegionControls
-          time={time}
-        /> 
+          day={day}
+        />        
         <ParameterControls getters={getters} setters={setters} />       
       </Map>
     </div>

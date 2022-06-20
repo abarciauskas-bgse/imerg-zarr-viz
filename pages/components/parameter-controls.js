@@ -24,10 +24,10 @@ const DEFAULT_COLORMAPS = {
 }
 
 const ParameterControls = ({ getters, setters }) => {
-  const { displayCog, time } = getters
+  const { displayCog, day } = getters
   const {
     setCogDisplay,
-    setTime,
+    setDay,
   } = setters
 
 
@@ -49,8 +49,8 @@ const ParameterControls = ({ getters, setters }) => {
           max={12}
           step={1}
           sx={{ width: '175px', display: 'inline-block' }}
-          value={time}
-          onChange={(e) => setTime(parseFloat(e.target.value))}
+          value={day}
+          onChange={(e) => setDay(parseFloat(e.target.value))}
         />
         <Badge
           sx={{
@@ -62,7 +62,7 @@ const ParameterControls = ({ getters, setters }) => {
             top: [1],
           }}
         >
-          {time.toFixed(0)}
+          {day.toFixed(0)}
         </Badge>
         <Box sx={{ ...sx.label, mt: [4] }}>
           <Link href='https://github.com/carbonplan/maps'>CODE ON Github</Link>
