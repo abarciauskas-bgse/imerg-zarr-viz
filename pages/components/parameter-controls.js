@@ -24,7 +24,7 @@ const DEFAULT_COLORMAPS = {
 }
 
 const ParameterControls = ({ getters, setters }) => {
-  const { displayCog, day } = getters
+  const { day } = getters
   const {
     setCogDisplay,
     setDay,
@@ -33,15 +33,6 @@ const ParameterControls = ({ getters, setters }) => {
 
   return (
     <>
-      <Box sx={{ position: 'absolute', top: 20, right: 20 }}>
-        <Box sx={{ ...sx.label, mt: [0] }}>Display COG</Box>
-        <Toggle
-          sx={{ float: 'right', mt: [2] }}
-          value={displayCog}
-          onClick={() => setCogDisplay((prev) => !prev)}
-        />
-      </Box>
-    
       <Box sx={{ position: 'absolute', top: 20, left: 20 }}>
         <Box sx={sx.label}>Time</Box>
         <Slider
