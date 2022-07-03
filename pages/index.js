@@ -29,7 +29,7 @@ const Index = () => {
           opacity={1}
           mode={'texture'}
           selector={{ day }}
-          source={'http://localhost:8000/smap-soil-moisture-daily.zarr'}
+          source={'https://ndpyramid-zarrs.s3.us-west-2.amazonaws.com/smap-soil-moisture-daily.zarr'}
           variable={'soil_moisture'}
         />
         <RegionControls
