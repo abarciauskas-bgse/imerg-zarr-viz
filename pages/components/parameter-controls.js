@@ -25,10 +25,7 @@ const DEFAULT_COLORMAPS = {
 
 const ParameterControls = ({ getters, setters }) => {
   const { day } = getters
-  const {
-    setCogDisplay,
-    setDay,
-  } = setters
+  const { setDay } = setters
 
 
   return (

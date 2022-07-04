@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' NODE_ENV=development next dev",
     "build": "next build",
+    "export": "next export",
     "format": "prettier --write pages/**/*.js",
     "predeploy": "npm run build",
     "start": "next start"
@@ -15,14 +16,16 @@
   "license": "MIT",
   "dependencies": {
     "@carbonplan/colormaps": "^2.0.0",
-    "@carbonplan/components": "^10.3.0",
-    "@carbonplan/maps": "file:../maps",
+    "@carbonplan/components": "^10.0.0",
+    "@carbonplan/icons": "^1.0.0",
+    "@carbonplan/maps": "^2.2.0",
     "@carbonplan/theme": "^7.0.0",
-    "fs.promises": "^0.1.2",
-    "gh-pages": "^3.2.3",
-    "next": "^11.1.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mdx-js/react": "^1.6.22",
+    "next": "^12.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "theme-ui": "^0.11.1"
+    "theme-ui": "^0.13.1"
   }
 }
