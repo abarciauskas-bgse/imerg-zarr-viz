@@ -15,6 +15,7 @@ const Index = () => {
   return (
     <div style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}>
       <Map zoom={2} center={[0, 0]} debug={false}>
+      <h1 style={{position: 'absolute', top: 0, left: 20}}>SMAP L3 Soil Moisture (2018-2022)</h1>
         <Line
           color={'white'}
           source={'https://storage.googleapis.com/carbonplan-share/maps-demo/land'}

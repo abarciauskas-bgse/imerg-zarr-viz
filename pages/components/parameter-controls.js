@@ -37,7 +37,7 @@ const ParameterControls = ({ getters, setters }) => {
 
   return (
     <>
-      <Box sx={{ position: 'absolute', top: 20, left: 20 }}>
+      <Box sx={{ position: 'absolute', top: 70, left: 20 }}>
         <Box sx={sx.label}>Time</Box>
         <Slider
           min={0}
@@ -60,7 +60,9 @@ const ParameterControls = ({ getters, setters }) => {
           {months[day]}
         </Badge>
         <Box sx={{ ...sx.label, mt: [4] }}>
-          <Link href='https://github.com/carbonplan/maps'>CODE ON Github</Link>
+          <Link href='https://github.com/abarciauskas-bgse/simple-zarr-demos'>CODE ON Github</Link>
+          <br />
+          <Link href='https://github.com/carbonplan/maps'>Based on @carbonplan/maps</Link>
         </Box>
       </Box>
     </>
