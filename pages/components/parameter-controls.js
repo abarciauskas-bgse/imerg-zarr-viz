@@ -24,8 +24,8 @@ const DEFAULT_COLORMAPS = {
 }
 
 const ParameterControls = ({ getters, setters }) => {
-  const {day} = getters;
-  const {setDay} = setters
+  const {day} = getters || {day: 0};
+  const {setDay} = setters || { setDay: null }
   const months = ['2018-01-01', '2018-01-02', '2018-01-03', '2018-01-04', '2018-01-05', '2018-01-06', '2018-01-07',
     '2018-01-08', '2018-01-09', '2018-01-10', '2018-01-11', '2018-01-12', '2019-01-01', '2019-01-02',
     '2019-01-03', '2019-01-04', '2019-01-05', '2019-01-06', '2019-01-07', '2019-01-08', '2019-01-09',
