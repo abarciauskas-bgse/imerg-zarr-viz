@@ -6,7 +6,7 @@
   "homepage": "http://abarciauskas-bgse.github.io/simple-imerg-zarr-demo",
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' NODE_ENV=development next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "format": "prettier --write pages/**/*.js",
     "predeploy": "npm run build",
     "start": "next start"
