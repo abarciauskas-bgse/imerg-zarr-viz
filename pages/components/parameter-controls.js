@@ -24,8 +24,8 @@ const DEFAULT_COLORMAPS = {
 }
 
 const ParameterControls = ({ getters, setters }) => {
-  const { day } = getters;
-  const { setDay } = setters
+  const day = getters || 0;
+  const setDay = setters
 
 
   return (
