@@ -3,4 +3,3 @@ node_modules
 data/
 .ipynb_checkpoints/
 .vscode
-out/
