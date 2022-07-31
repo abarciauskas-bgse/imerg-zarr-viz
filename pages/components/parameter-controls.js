@@ -24,24 +24,14 @@ const DEFAULT_COLORMAPS = {
 }
 
 const ParameterControls = ({ getters, setters }) => {
-  const { displayCog, time } = getters
+  const { time } = getters
   const {
-    setCogDisplay,
     setTime,
   } = setters
 
 
   return (
     <>
-      <Box sx={{ position: 'absolute', top: 20, right: 20 }}>
-        <Box sx={{ ...sx.label, mt: [0] }}>Display COG</Box>
-        <Toggle
-          sx={{ float: 'right', mt: [2] }}
-          value={displayCog}
-          onClick={() => setCogDisplay((prev) => !prev)}
-        />
-      </Box>
-    
       <Box sx={{ position: 'absolute', top: 70, left: 20 }}>
         <Box sx={sx.label}>Month</Box>
         <Slider
