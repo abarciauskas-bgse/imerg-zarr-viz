@@ -31,10 +31,9 @@ npm i
 npm run dev
 ```
 
-# Todos
+# Deployment
 
-* Create the Zarr from the original NetCDF? (but if we're doing this for comparison with COGs, maybe this step we _should_ go from COG to Zarr 🤔).
-* Look into additional features (time series generation)
+Deployment has been automated using AWS Amplify Web Hosting: https://main.d36v6mb9ch6nge.amplifyapp.com/
 
 
 ## Experimental: Visualizing COGs with @carbonplan/maps
@@ -42,3 +41,5 @@ npm run dev
 It was of interest to visualize COGs using the same library as visualizing Zarr, to see datasets of both underlying format in one map viewer.
 
 To do this, I generated a COG using [veda-data-pipelines: GPM IMERG example](https://github.com/NASA-IMPACT/veda-data-pipelines/tree/ab/updates-for-imerg/docker/hdf5-to-cog#gpm-imerg-example) and changes to @carbonplan/maps detailed here: https://github.com/carbonplan/maps/pull/41
+
+
