@@ -24,10 +24,8 @@ const DEFAULT_COLORMAPS = {
 }
 
 const ParameterControls = ({ getters, setters }) => {
-  const { time } = getters
-  const {
-    setTime,
-  } = setters
+  const {time} = getters || {time: 0};
+  const {setTime} = setters || { setTime: null }
 
 
   return (
