@@ -6,7 +6,7 @@ import { useColormap } from '@carbonplan/colormaps'
 
 const Index = () => {
   const colormap = useColormap('warm')
-  const [time, setTime] = useState(1)
+  const [time, setTime] = useState(0)
   const [displayCog, setCogDisplay] = useState(false)
   const getters = { displayCog, time }
   const setters = {
@@ -16,6 +16,9 @@ const Index = () => {
   
   return (
     <div style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}>
+      <h1 style={{position: 'absolute', top: 0, left: 20}}>GPM IMERG Preceiptation</h1>
+      <br />
+      <h2 style={{position: 'absolute', top: 40, left: 20}}>1st day of each month from June 1, 2000 to June 1, 2001</h2>
       <Map zoom={2} center={[0, 0]} debug={false}>
         <Line
           color={'white'}
@@ -29,7 +32,7 @@ const Index = () => {
           opacity={1}
           mode={'texture'}
           selector={{ time }}
-          source={'http://localhost:8000/gpmimerg-monthly.zarr'}
+          source={'https://ndpyramid-zarrs.s3.us-west-2.amazonaws.com/gpmimerg-monthly.zarr'}
           variable={'precipitation'}
         />
         <RegionControls
