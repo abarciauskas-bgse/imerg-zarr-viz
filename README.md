@@ -6,28 +6,11 @@ Prequisites: nvm, npm, pip
 
 # Steps
 
-1. Create the COG
-2. Create the Zarr from the COG
+1. Create the Zarr and ndpyramid using notebooks/create-zarr-with-pangeo-forge.ipynb
 3. Run an http server for the Zarr (assuming local storage)
 4. Run the next.js app to visualize the Zarr
 
 ![IMERG Zarr](imerg-zarr.png)
-
-## Step 1: Create the COG
-
-Generated a COG using [cloud-optimized-data-pipelines: GPM IMERG example](https://github.com/NASA-IMPACT/cloud-optimized-data-pipelines/tree/main/docker/hdf5-to-cog#gpm-imerg-example)
-
-## Step 2: Create the Zarr
-
-Assumes you have copied the `tif` to `data/` in this project.
-
-```bash
-cd notebooks
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Execute cells in `imerg-zarr-from-tif.ipynb`.
 
 ## Step 3: Run an http server for the Zarr (assuming local storage)
 
@@ -54,3 +37,8 @@ npm run dev
 * Look into additional features (time series generation)
 
 
+## Experimental: Visualizing COGs with @carbonplan/maps
+
+It was of interest to visualize COGs using the same library as visualizing Zarr, to see datasets of both underlying format in one map viewer.
+
+To do this, I generated a COG using [veda-data-pipelines: GPM IMERG example](https://github.com/NASA-IMPACT/veda-data-pipelines/tree/ab/updates-for-imerg/docker/hdf5-to-cog#gpm-imerg-example) and changes to @carbonplan/maps detailed here: https://github.com/carbonplan/maps/pull/41
